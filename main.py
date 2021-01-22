@@ -75,11 +75,9 @@ def edstem(event, context):
         existingPosts.append(output[i]['ID'] )
         i += 1
     print(existingPosts)
-    #print("ds", ds.iter_all_posts())
     posts = getEdstemPosts()
     for post in posts:
         postId = post['id']
-        #theTitle = html.unescape(re.sub('<[^<]+?>', '', str(post['history'][0]['subject'])))
         if postId not in existingPosts:
             print(postId)
             queryObject = {
